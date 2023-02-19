@@ -1,0 +1,72 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, yellow, green);
+}
+
+#titolo {
+    text-align: center;
+    margin: 50px 0px;
+}
+
+#form {
+    width: 75vmin;
+    height: 80%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 50px 0px;
+}
+
+#input {
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 16px;
+}
+
+.list {
+    list-style: none;
+    width: 100%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.list-items {
+    padding: 15px 5px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.list-items:hover {
+    background-color: lightgray;
+}
+
+div {
+    --angle: 0deg;
+    border: 1vmin solid;
+    border-radius: 5px 5px 5px 5px;
+    border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+    animation: 7s rotate linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
